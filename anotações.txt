@@ -1,0 +1,13 @@
+Expressão regula ou regex(//)= uma sequencia de caracteres que define um padrão de busca em strings
+
+Opereadores Literais= localiza exatamente o que está descrito na regex
+
+metacaracter= caracteres especiais que representam funções(
+    \= é usado para determinar como um caractere subsequente será interpretado.
+    \d= digito(0-9),
+    .= qualquer caracter,
+    \s= espaço em branco,
+    ^= busca os caracteres desde que estejam no inicio do paragrafo,
+    \w= qualquer caractere alfanumérico(A a Z e (0 a 9)),
+    $= busca os caracteres desde que estejam no final do paragrafo,
+)
