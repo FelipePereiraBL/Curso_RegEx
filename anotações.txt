@@ -1,13 +1,34 @@
 Expressão regula ou regex(//)= uma sequencia de caracteres que define um padrão de busca em strings
 
-Opereadores Literais= localiza exatamente o que está descrito na regex
+Opereadores Literais()= localiza exatamente o que está descrito na regex
 
 metacaracter= caracteres especiais que representam funções(
-    \= é usado para determinar como um caractere subsequente será interpretado.
-    \d= digito(0-9),
-    .= qualquer caracter,
-    \s= espaço em branco,
-    ^= busca os caracteres desde que estejam no inicio do paragrafo,
-    \w= qualquer caractere alfanumérico(A a Z e (0 a 9)),
-    $= busca os caracteres desde que estejam no final do paragrafo,
+    \= é usado para determinar como um caractere subsequente será interpretado,
+
+    \d(minusculo)= digito(0-9),
+    \D(maiusculo)= qualquer caracter que não seja um digito,
+
+    .= qualquer caracter inclusive pontos,
+    \.= pega o ponto final,
+
+    \w(minusculo)= qualquer caractere alfanumérico(a-z, A-Z e (0-9)),
+    \W(maiusculo)= qualquer caracter não alfanumerico(. , : ? ! % $ etc) e espaço em branco,
+
+    \s(minusculo)= espaço em branco,
+    \S(maiuscula)= qualquer caracter que não seja um espaço em branco,
+
+    ^(no inicio do metacaracter)= busca os caracteres desde que estejam no inicio da string ou linha,
+    $(no final do metacaracter)= busca os caracteres desde que estejam no final da string ou linha,
+
+    sinalizadores= bandeiras que afetam como a busca é feita(
+        g(global)= a busca abrange todo o conteudo da string,sem ela apenas o primeiro caracter correspondente é devolvido,
+        m(multiple)= Só afeta o comportamento de ^ e $,
+        i(case insensitive)= a busca ignora maiusculas e minisculas,
+    )
+
+    character-set([character] ou [de - até])= define exatamente os caracteres vão ser incluidos na busca
+
+    quantificadores({quantidade} ou {min - max})= especifica a quantidade de determinado caracter que deve ser buscada
+
+    ?= informa que o caracter anterior a ela pode ou não existir
 )
