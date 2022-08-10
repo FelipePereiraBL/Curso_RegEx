@@ -1,6 +1,6 @@
 Expressão regula ou regex(//)= uma sequencia de caracteres que define um padrão de busca em strings
 
-Opereadores Literais()= localiza exatamente o que está descrito na regex
+Opereadores Literais(qualquer coisa que for digitada sem metacaracteres)= localiza exatamente o que está descrito na regex
 
 metacaracter= caracteres especiais que representam funções(
     \= é usado para determinar como um caractere subsequente será interpretado,
@@ -27,8 +27,9 @@ metacaracter= caracteres especiais que representam funções(
     )
 
     character-set([character] ou [de - até])= define exatamente os caracteres vão ser incluidos na busca
-
     quantificadores({quantidade} ou {min - max})= especifica a quantidade de determinado caracter que deve ser buscada
 
-    ?= informa que o caracter anterior a ela pode ou não existir
+    ?= considera que o caracter anterior a ela pode ou não existir
+    *= considera que o caracter anterior a ela pode existir quantas vezes forem possiveis ou não existir(por exemplo /vo*a/g é o mesmo que colocar /vo{0,}a/g )
+    += considera que o caracter anterior a ela pode existir varias vezes ou no minimo uma vez 
 )
