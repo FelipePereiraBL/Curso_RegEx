@@ -2,6 +2,12 @@ Expressão regula ou regex(//)= uma sequencia de caracteres que define um padrã
 
 Opereadores Literais(qualquer coisa que for digitada sem metacaracteres)= localiza exatamente o que está descrito na regex
 
+sinalizadores= bandeiras que afetam como a busca é feita(
+    g(global)= a busca abrange todo o conteudo da string,sem ela apenas o primeiro caracter correspondente é devolvido,
+    m(multiple)= Só afeta o comportamento de ^ e $,
+    i(case insensitive)= a busca ignora maiusculas e minisculas,
+    )
+
 metacaracter= caracteres especiais que representam funções(
     \= é usado para determinar como um caractere subsequente será interpretado,
 
@@ -20,12 +26,6 @@ metacaracter= caracteres especiais que representam funções(
     ^(no inicio do metacaracter)= busca os caracteres desde que estejam no inicio da string ou linha,
     $(no final do metacaracter)= busca os caracteres desde que estejam no final da string ou linha,
 
-    sinalizadores= bandeiras que afetam como a busca é feita(
-        g(global)= a busca abrange todo o conteudo da string,sem ela apenas o primeiro caracter correspondente é devolvido,
-        m(multiple)= Só afeta o comportamento de ^ e $,
-        i(case insensitive)= a busca ignora maiusculas e minisculas,
-    )
-
     character-set([character] ou [de - até])= define exatamente os caracteres vão ser incluidos na busca
     quantificadores({quantidade} ou {min - max})= especifica a quantidade de determinado caracter que deve ser buscada
 
@@ -33,3 +33,13 @@ metacaracter= caracteres especiais que representam funções(
     *= considera que o caracter anterior a ela pode existir quantas vezes forem possiveis ou não existir(por exemplo /vo*a/g é o mesmo que colocar /vo{0,}a/g )
     += considera que o caracter anterior a ela pode existir varias vezes ou no minimo uma vez 
 )
+
+Operadores Logicos(se, somente se, ou )= trabalha atraves de decisoes logicas(
+    (caracter ou palavra que se quer buscar)= conjunto,
+    |= ou,
+    [^conjunto de caracteres]= negação de conjunto personalizado de caracteres
+
+    (?= caracteres)(lookahead)= selecione apenas o que for seguido do caracteres especificado. O caracter especificado nâo faz parte da seleção,
+    (?! caracteres)(negative lookahead)= seleciona tudo, menos o que for seguido do caracteres especificado. O caracter especificado nâo faz parte da seleção
+)
+
