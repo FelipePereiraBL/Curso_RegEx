@@ -5,8 +5,7 @@ Opereadores Literais(qualquer coisa que for digitada sem metacaracteres)= locali
 sinalizadores= bandeiras que afetam como a busca é feita(
     g(global)= a busca abrange todo o conteudo da string,sem ela apenas o primeiro caracter correspondente é devolvido,
     m(multiple)= Só afeta o comportamento de ^ e $,
-    i(case insensitive)= a busca ignora maiusculas e minisculas,
-    )
+    i(case insensitive)= a busca ignora maiusculas e minisculas)
 
 metacaracter= caracteres especiais que representam funções(
     \= é usado para determinar como um caractere subsequente será interpretado,
@@ -16,6 +15,7 @@ metacaracter= caracteres especiais que representam funções(
 
     .= qualquer caracter inclusive pontos,
     \.= pega o ponto final,
+    \/= pega a barra invertida
 
     \w(minusculo)= qualquer caractere alfanumérico(a-z, A-Z e (0-9)),
     \W(maiusculo)= qualquer caracter não alfanumerico(. , : ? ! % $ etc) e espaço em branco,
@@ -25,21 +25,24 @@ metacaracter= caracteres especiais que representam funções(
 
     ^(no inicio do metacaracter)= busca os caracteres desde que estejam no inicio da string ou linha,
     $(no final do metacaracter)= busca os caracteres desde que estejam no final da string ou linha,
+    \b= uma posição de limite de palavra entre um caractere de palavra e um caractere ou posição que não seja de palavra (início / fim da string),
 
     character-set([character] ou [de - até])= define exatamente os caracteres vão ser incluidos na busca
     quantificadores({quantidade} ou {min - max})= especifica a quantidade de determinado caracter que deve ser buscada
+    conjunto((caracter))= conjunto de caracteres que vai ser buscado
 
     ?= considera que o caracter anterior a ela pode ou não existir
     *= considera que o caracter anterior a ela pode existir quantas vezes forem possiveis ou não existir(por exemplo /vo*a/g é o mesmo que colocar /vo{0,}a/g )
-    += considera que o caracter anterior a ela pode existir varias vezes ou no minimo uma vez 
+    += considera que o caracter anterior a ela pode existir varias vezes ou no minimo uma vez (por exemplo /vo+a/g é o mesmo que colocar /vo{1,}a/g )
 )
 
 Operadores Logicos(se, somente se, ou )= trabalha atraves de decisoes logicas(
-    (caracter ou palavra que se quer buscar)= conjunto,
     |= ou,
     [^conjunto de caracteres]= negação de conjunto personalizado de caracteres
 
     (?= caracteres)(lookahead)= selecione apenas o que for seguido do caracteres especificado. O caracter especificado nâo faz parte da seleção,
     (?! caracteres)(negative lookahead)= seleciona tudo, menos o que for seguido do caracteres especificado. O caracter especificado nâo faz parte da seleção
+
+    \digito 0-9= referencia grupo de caracteres anteriores
 )
 
