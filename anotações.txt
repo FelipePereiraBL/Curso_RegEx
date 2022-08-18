@@ -44,5 +44,7 @@ Operadores Logicos(se, somente se, ou )= trabalha atraves de decisoes logicas(
     (?! caracteres)(negative lookahead)= seleciona tudo, menos o que for seguido do caracteres especificado. O caracter especificado nâo faz parte da seleção
 
     \digito 0-9= referencia grupo de caracteres anteriores
+
+    \-= ignora o ultimo conjunto de metacaracteres
 )
 
